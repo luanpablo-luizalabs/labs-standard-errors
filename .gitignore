@@ -14,3 +14,5 @@ yarn-error.log
 .nyc_output/*.json
 coverage/
 coverage.lcov
+
+dist
