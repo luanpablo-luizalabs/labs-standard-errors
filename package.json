@@ -79,12 +79,18 @@
       "it",
       "test",
       "beforeAll"
+    ],
+    "ignore": [
+      "dist"
     ]
   },
   "nyc": {
     "include": [
       "src/**/*.js",
       "src/**/**/*.js"
+    ],
+    "exclude": [
+      "dist"
     ],
     "require": [
       "babel-register"
