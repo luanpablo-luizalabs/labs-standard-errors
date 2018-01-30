@@ -2,7 +2,7 @@
   "name": "labs-standard-errors",
   "version": "1.0.0",
   "description": "LuizaLabs Standard API Errors",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "npm run lint && nyc npm run test-mocha",
     "test-mocha": "NODE_CONFIG_DIR=./src/config NODE_ENV=test mocha --harmony --exit ./__tests__/*.js",
