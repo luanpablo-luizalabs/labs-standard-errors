@@ -33,6 +33,7 @@
   "homepage": "https://github.com/luanpablo-luizalabs/labs-standard-errors#readme",
   "devDependencies": {
     "assert": "^1.4.1",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.1",
