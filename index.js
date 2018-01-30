@@ -1,5 +1,5 @@
-import {buildJoiError, buildGenericErrors} from './apigee/errors/joi-error-parser'
-import errorParser from './apigee/errors/error-parser'
+import {buildJoiError, buildGenericErrors} from './apigee/errors/joiErrorParser'
+import errorParser from './apigee/errors/errorParser'
 
 export default {
   buildJoiError,
