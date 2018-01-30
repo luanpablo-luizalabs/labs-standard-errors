@@ -1,5 +1,3 @@
-require('babel-core/register')
-
 import {buildJoiError, buildGenericErrors} from './apigee/errors/joiErrorParser'
 import errorParser from './apigee/errors/errorParser'
 
