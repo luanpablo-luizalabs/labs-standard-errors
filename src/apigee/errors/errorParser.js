@@ -1,7 +1,11 @@
-import {isEmpty, isString, trim} from '../../helpers/jsonHelpers'
-import errorCatalog from './errorCatalog'
+const jsonHelpers = require('../../helpers/jsonHelpers')
+const errorCatalog = require('./errorCatalog')
 
-export default function error (code, parameters) {
+const isEmpty = jsonHelpers.isEmpty
+const isString = jsonHelpers.isString
+const trim = jsonHelpers.trim
+
+module.exports = function error (code, parameters) {
   if (!isEmpty(parameters) && isString(parameters)) {
     parameters = [parameters]
   }

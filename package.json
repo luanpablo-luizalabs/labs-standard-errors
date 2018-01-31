@@ -2,13 +2,12 @@
   "name": "labs-standard-errors",
   "version": "1.0.0",
   "description": "LuizaLabs Standard API Errors",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "npm run lint && nyc npm run test-mocha",
     "test-mocha": "NODE_CONFIG_DIR=./src/config NODE_ENV=test mocha --harmony --exit ./__tests__/*.js",
     "precommit": "npm run git-hook",
     "prepush": "npm run git-hook",
-    "prepublish": "gulp prepublish",
     "git-hook": "npm run lint -s && npm run test -s",
     "lint": "standard --verbose | snazzy",
     "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | xargs standard | snazzy",
@@ -34,7 +33,6 @@
   "homepage": "https://github.com/luanpablo-luizalabs/labs-standard-errors#readme",
   "devDependencies": {
     "assert": "^1.4.1",
-    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.1",
@@ -42,18 +40,7 @@
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "eslint": "^4.16.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-eslint": "^4.0.2",
-    "gulp-exclude-gitignore": "^1.2.0",
-    "gulp-istanbul": "^1.1.3",
-    "gulp-mocha": "^5.0.0",
-    "gulp-nsp": "^2.4.2",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sourcemaps": "^2.6.4",
     "husky": "^0.14.3",
-    "isparta": "^4.0.0",
     "mocha": "^5.0.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^11.4.1",
@@ -79,9 +66,6 @@
       "it",
       "test",
       "beforeAll"
-    ],
-    "ignore": [
-      "dist"
     ]
   },
   "nyc": {
@@ -89,17 +73,11 @@
       "src/**/*.js",
       "src/**/**/*.js"
     ],
-    "exclude": [
-      "dist"
-    ],
     "require": [
       "babel-register"
     ],
     "sourceMap": true,
     "instrument": true,
     "all": false
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }

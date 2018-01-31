@@ -1,5 +1,5 @@
-import errorParser from './errorParser'
-import __joiToErrorCatalog from './joiErrorCatalog'
+const errorParser = require('./errorParser')
+const __joiToErrorCatalog = require('./joiErrorCatalog')
 
 let parsePath = path => {
   if (path instanceof Array) {
@@ -70,4 +70,7 @@ let buildGenericErrors = error => {
   return errorParser(10000, `- Error code not found for joi error ${error.output.payload.message}`)
 }
 
-export default {buildJoiError, buildGenericErrors}
+module.exports = {
+  buildJoiError,
+  buildGenericErrors
+}

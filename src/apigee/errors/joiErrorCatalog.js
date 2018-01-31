@@ -1,5 +1,5 @@
-import _ from 'lodash'
-import moment from 'moment'
+const _ = require('lodash')
+const moment = require('moment')
 
 const __joiToErrorCatalog = {
   'any.required': {
@@ -234,4 +234,4 @@ const __joiToErrorCatalog = {
   }
 }
 
-export default __joiToErrorCatalog
+module.exports = __joiToErrorCatalog

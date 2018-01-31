@@ -1,4 +1,4 @@
-import _ from 'lodash'
+const _ = require('lodash')
 
 export function clearJson (object) {
   if (object instanceof Array) {

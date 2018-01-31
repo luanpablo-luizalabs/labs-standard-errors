@@ -617,4 +617,4 @@ const errorCatalog = {
   }
 }
 
-export default errorCatalog
+module.exports = errorCatalog
