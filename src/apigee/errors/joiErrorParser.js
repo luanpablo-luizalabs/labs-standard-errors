@@ -29,7 +29,7 @@ let parsePath = path => {
 }
 
 let buildJoiError = error => {
-  let errorDetails = error.data.details
+  let errorDetails = error.data.details || error.data.parameters.details
   let parameterPath = parsePath(errorDetails[0].path)
 
   parameterPath = parameterPath === '' ? errorDetails[0].context.label : parameterPath
